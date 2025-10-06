@@ -36,10 +36,10 @@ python download_models.py
 ```
 
 ### Option 3: Manual Download
-1. Download your trained models from Google Drive or your model storage
-2. Place them in this directory with the exact names listed above
-3. Restart the API server
-
+1. Download your model files from your storage location
+2. Rename them to match the expected filenames exactly
+3. Place them in this directory
+4. Restart the API server
 ## Without Models
 
 The API will work with **smart rule-based fallback** if model files are not present:
