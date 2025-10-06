@@ -1,0 +1,26 @@
+# SMS Spam Detection - Git Attributes
+# No LFS tracking - large files are excluded via .gitignore
+
+# Text files should be normalized to LF line endings
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.sh text eol=lf
+
+# Windows batch files should use CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files should be left untouched
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+
+# Note: Large model files (*.pkl, *.pt, *.h5, etc.) are excluded via .gitignore
+# and should not be committed to the repository
