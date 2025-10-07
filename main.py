@@ -1113,16 +1113,18 @@ class ModelManager:
         }
 
     def get_available_models(self) -> Dict[str, Dict[str, Any]]:
-        """Get all models info for frontend"""
+        """Get only actually working models for frontend"""
         model_info = {}
         for key, model_data in self.models.items():
-            entry = {
-                'name': model_data['name'],
-                'accuracy': model_data['accuracy'],
-                'dataset_size': model_data['dataset_size'],
-                'training_focus': model_data['training_focus']
-            }
-            model_info[key] = entry
+            # Only include actually working models, not mock ones
+            if self._is_model_working(key):
+                entry = {
+                    'name': model_data['name'],
+                    'accuracy': model_data['accuracy'],
+                    'dataset_size': model_data['dataset_size'],
+                    'training_focus': model_data['training_focus']
+                }
+                model_info[key] = entry
         
         return {'available_models': model_info}
 
